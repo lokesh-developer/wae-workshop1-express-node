@@ -1,0 +1,16 @@
+{
+  "name": "wae-workshop1-express-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mongodb": "^6.5.0",
+    "moongoose": "^0.0.5"
+  }
+}
