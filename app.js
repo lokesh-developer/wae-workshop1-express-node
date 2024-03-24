@@ -1,10 +1,20 @@
 const express = require('express')
 const db = require('./db');
-const task = require('./db/tasks');
 const app = express()
 const port = 4000
+const mongoose = require("mongoose");
 
 db();
+
+const Schema = mongoose.Schema;
+
+const taskSchema = new Schema({
+    name: String,
+    completed: Boolean
+});
+
+const Task = mongoose.model('Task', taskSchema);
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
@@ -16,7 +26,7 @@ app.listen(port, () => {
 
 app.post('/add', async (req, res) => {
     const { name } = req.query;
-    const newTask = new task({
+    const newTask = new Task({
         name: name
     });
 

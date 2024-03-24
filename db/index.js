@@ -1,11 +1,10 @@
-const moongoose = require("moongoose")
+const moongoose = require("mongoose")
 const dbUrl = "mongodb+srv://lokesh-kabra:lokesh12@cluster0.bmw0v.mongodb.net/"
 
 async function db() {
     moongoose.connect(dbUrl, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
+        useUnifiedTopology: true
     })
         .then(() => console.log('Connected to MongoDB'))
         .catch((error) => console.error('MongoDB connection error:', error));
