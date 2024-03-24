@@ -1,5 +1,5 @@
 const moongoose = require("mongoose")
-const dbUrl = "mongodb+srv://lokesh-kabra:lokesh12@cluster0.bmw0v.mongodb.net/"
+const dbUrl = "mongodb+srv://lokesh-kabra:lokesh12@cluster0.bmw0v.mongodb.net/wae-workshop"
 
 async function db() {
     moongoose.connect(dbUrl, {
